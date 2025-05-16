@@ -1,0 +1,245 @@
+/* RESET + BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+  }
+  .dark-mode {
+    background: #121212;
+    color: #eee;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .auth-buttons button {
+    margin-left: 10px;
+    background: #00c9a7;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .auth-buttons button:hover {
+    background: #00b494;
+  }
+  .dark-toggle {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  /* HERO */
+  .hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('https://source.unsplash.com/1600x900/?habit,success') no-repeat center/cover;
+    color: #fff;
+  }
+  .hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 20px;
+  }
+  .hero button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #00c9a7;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  /* SECTIONS */
+  .section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  form {
+    margin: 20px auto;
+    max-width: 500px;
+    display: flex;
+    gap: 10px;
+  }
+  input[type='text'] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+  }
+  button[type='submit'] {
+    padding: 10px 16px;
+    background: #00c9a7;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  ul#habit-list {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  ul#habit-list li {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 8px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+  }
+  ul#habit-list li.completed {
+    text-decoration: line-through;
+    color: #00ffae;
+  }
+  
+  /* MODAL */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    background: #fff;
+    color: #000;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+  }
+  .modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  .modal-content button {
+    background: #00c9a7;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+  }
+  
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #1c1c1c;
+  }
+  
+  /* CALENDAR */
+  #calendar-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    border-radius: 16px;
+    color: #fff;
+  }
+  #calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  #calendar-header button {
+    background: #00c9a7;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  #calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  .day {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+  }
+  .day:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+  .day .event {
+    font-size: 0.7rem;
+    margin-top: 5px;
+    color: #00ffb7;
+  }
+  .hidden {
+    display: none;
+  }
+  #event-form {
+    margin-top: 10px;
+    text-align: left;
+  }
+  #event-form input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+  }
+  #event-form button {
+    background: #00c9a7;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  #event-form button:hover {
+    background: #00b494;
+  }
+  
