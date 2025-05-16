@@ -22,11 +22,11 @@ HabitEase is a modern, user-friendly habit tracking web application designed to 
 
 ## Demo
 
-[GitHub Pages live demo](https://your-username.github.io/habit-ease/)
+[GitHub Pages live demo](https://santhosh142005.github.io/habit-ease/)
 
 *(Replace with your actual URL after deploying)*
 
-file:///C:/Users/SANTHOSH%20M/OneDrive/%E5%9B%BE%E7%89%87/Habitease%20Project/index.html
+
 
 ## Installation & Usage
 
